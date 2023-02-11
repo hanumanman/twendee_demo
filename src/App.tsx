@@ -1,4 +1,5 @@
 import DataTable from "./components/DataTable";
+import Typography from "@mui/material/Typography";
 
 function App() {
   return (
@@ -17,12 +18,20 @@ function App() {
         <div
           id="GridContainer"
           style={{
-            maxWidth: "50rem",
-            minWidth: "40rem",
+            maxWidth: "100%",
+            minWidth: "50%",
             backgroundColor: "white",
           }}
         >
           <DataTable />
+
+          <Typography
+            variant="subtitle1"
+            gutterBottom
+            sx={{ textAlign: "center", fontStyle: "italic" }}
+          >
+            Table 1. 100 random users
+          </Typography>
         </div>
       </div>
     </>

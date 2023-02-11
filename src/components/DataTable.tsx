@@ -1,7 +1,7 @@
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
-
 import Avatar from "@mui/material/Avatar";
 import useAxios from "../hooks/useAxios";
+import "./DataTable.css";
 
 interface user {
   login: {
@@ -19,10 +19,18 @@ interface user {
 }
 
 const columns: GridColDef[] = [
-  { field: "id", headerName: "ID", width: 50 },
+  {
+    field: "id",
+    headerName: "ID",
+    headerClassName: "table-header",
+    headerAlign: "center",
+    width: 50,
+  },
   {
     field: "avatar",
     headerName: "Avatar",
+    headerClassName: "table-header",
+    headerAlign: "center",
     width: 70,
     renderCell: (params) => {
       return (
@@ -32,8 +40,20 @@ const columns: GridColDef[] = [
       );
     },
   },
-  { field: "name", headerName: "Full name", flex: 1 },
-  { field: "username", headerName: "Username", flex: 1 },
+  {
+    field: "name",
+    headerName: "Full name",
+    headerClassName: "table-header",
+    headerAlign: "center",
+    flex: 1,
+  },
+  {
+    field: "username",
+    headerName: "Username",
+    headerClassName: "table-header",
+    headerAlign: "center",
+    flex: 1,
+  },
 ];
 
 export default function DataTable() {
@@ -58,8 +78,10 @@ export default function DataTable() {
       <DataGrid
         rows={randomUser}
         columns={columns}
-        pageSize={5}
+        pageSize={10}
         rowsPerPageOptions={[5]}
+        loading={loading}
+        error={error}
       />
     </div>
   );
