@@ -59,6 +59,7 @@ const columns: GridColDef[] = [
 export default function DataTable() {
   const { response, loading, error } = useAxios({
     method: "get",
+    url: "?results=100",
   });
 
   let randomUser = [];
