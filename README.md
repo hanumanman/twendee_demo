@@ -9,6 +9,11 @@ A simple data table that fetch and render 100 random users from [Random User API
 ### Installing
 
 - Clone this repositoriy to your local device.
+
+```
+$ git clone https://github.com/hanumanman/twendee_demo
+```
+
 - To install dependencies and preview the demo site, run:
 
 ```
@@ -20,4 +25,4 @@ The result should be available on http://127.0.0.1:5173/.
 
 ### Demo website
 
-You can check out the demo directly [here](https://hoang-twendee-demo.netlify.app/)
+You can check out the demo directly [here](https://hoang-twendee-demo.netlify.app/).
